@@ -1,0 +1,10 @@
+{
+    "video": false,
+    "viewportWidth": 1520,
+    "viewportHeight": 880,
+    "chromeWebSecurity": false,
+    "numTestsKeptInMemory": 1,
+    "ignoreTestFiles": "*.js",
+    "testFiles": ["**/*.{feature, features}"],
+    "screenshotsFolder": "reports/screenshots"
+}
