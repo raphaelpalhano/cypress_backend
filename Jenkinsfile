@@ -1,18 +1,15 @@
 pipeline {
-    agent {
-        docker {
-            image 'cypress/base:latest'
-        }
-    }
+    agent any
+
     stages {
         stage('Setup') {
             steps {
-                bat "npm ci"
+                sh "npm ci"
             }
         }
         stage('Tests') {
             steps {
-                bat "npm run cy:run"
+                sh "npm run cy:run"
             }
         }
     }
