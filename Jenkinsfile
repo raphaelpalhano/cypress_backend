@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    parameters{
-        string(name: 'SPEC', defaultValue: "cypress/integration/specs/**", description: "definicao dos specs")
-    }
-
     stages {
         stage('Setup') {
             steps {
@@ -13,7 +9,7 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                bat "npx cypress run --spec ${SPEC}"
+                bat "npm run cy:run"
             }
         }
     }
