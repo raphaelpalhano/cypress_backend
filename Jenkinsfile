@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters{
-        string(name: 'SPEC', "cypress/integration/specs/**", description: "definicao dos specs")
+        string(name: 'SPEC', defaultValue: "cypress/integration/specs/**", description: "definicao dos specs")
     }
 
     stages {
