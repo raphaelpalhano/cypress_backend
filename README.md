@@ -1,6 +1,6 @@
 # Acelerador_Cypress_API
 
-  * Instalar: `npm i --save-dev {package}`.
+  * Instalar: `npm i {package} --save-dev`.
   * Rodar em modo headless: `npm run cy:run`
   * Rodar em tela gráfica: `npm run cy:open`
   * Gerar o report HTML(sempre após rodar o cypress): `npm run cy:report`
