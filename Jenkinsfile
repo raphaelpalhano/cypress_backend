@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh "npm ci"
+                bat "npm ci"
             }
         }
         stage('Tests') {
             steps {
-                sh "npm run cy:tags TAGS=$tags"
+                bat "npm run cy:run"
             }
         }
     }
