@@ -32,6 +32,20 @@
   * -v %cd%:/usr/src/e2e (cria volume entre o container e o pc) 
   ~~~
 
+# Como subir a esteira no Jenkins 
+
+  1. Sistema operacional?
+  Linux == utilizar sh no jenkinsfile
+  Windows == bat
+
+  2. Servidor rodando?
+   * baixe os plugins pipeline/cucumber/github/git/etc
+   * configure o job pelo pipeline --> 
+   * coloque a opção de pipeline por SCM -->
+   * Aponte a URI do repositório
+   * Clique em save  
+
+
 # Passo a passo para novas implementações:
 
   TODO

@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+        ansiColor('xterm') 
+    }
+
     stages {
         stage('Setup') {
             steps {
@@ -9,7 +13,7 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                bat "npm run cy:ci"
+                bat "npm run cy:tags TAGS=$tags"
             }
         }
     }
