@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                bat "npm run cy:tags TAGS=$tags"
+                bat "npm run cy:run:prod"
             }
         }
     }
