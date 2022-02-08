@@ -2,17 +2,23 @@ pipeline {
     agent { dockerfile true }
 
     stages {
-        stage('Setup') {
+        stage('Build') {
             steps {
-                bat "npm ci"
+                bat "docker build -f Dockerfile -t quality_integration/cypress"
+                
             }
         }
-        stage('Tests') {
+        
+        stage('Run') {
             steps {
-                bat "npm run cy:ci"
+               bat "docker run -i -v "%cd%":/usr/src/e2e -t quality_integration/cypress --spec cypress/integration/spec/*.feature"
+       
             }
         }
+
+
     }
+
     post {
          always {
             script {
@@ -20,4 +26,10 @@ pipeline {
             }
          }
     }
+
+       
 }
+
+
+   
+
