@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                bat "npm ci"
+                powershell "npm ci"
             }
         }
         stage('Tests') {
             steps {
-                bat "npm run cy:run:prod"
+                powershell "npm run cy:run:prod"
             }
         }
     }
