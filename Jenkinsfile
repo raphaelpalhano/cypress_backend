@@ -1,9 +1,5 @@
 pipeline {
-    agent any
-
-    options{
-        ansiColor('xterm')
-    }
+    agent { dockerfile true }
 
     stages {
         stage('Setup') {
