@@ -1,35 +1,23 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
 
     stages {
-        stage('Build') {
+        stage('Setup') {
             steps {
-                bat "docker build -f Dockerfile -t quality_integration/cypress"
-                
+                bat "npm ci"
             }
         }
-        
-        stage('Run') {
+        stage('Tests') {
             steps {
-               bat "docker run -i -v "%cd%":/usr/src/e2e -t quality_integration/cypress --spec cypress/integration/spec/*.feature"
-       
+                bat "npm run cy:ci"
             }
         }
-
-
     }
-
     post {
          always {
             script {
-                cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
+               cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
             }
          }
     }
-
-       
 }
-
-
-   
-
