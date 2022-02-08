@@ -24,6 +24,7 @@
   ~~~shell
   * docker build -t <nome_da_imagem> .
   * docker container run --rm -it -e tags=@tag -v %cd%:/usr/src/e2e <nome_da_imagem>
+  * docker run -i -v "%cd%":/usr/src/e2e -t <nome_da_imagem> --spec cypress/integration/spec/*.feature 
   * `O comando acima não funciona no Powershell devido aos dois pontos após %cd%`
 
   * -it (ativa logs) 
