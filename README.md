@@ -46,7 +46,31 @@
    * Clique em save  
 
 
+# Configuração de dados pelo Banco
+
+  1. Definir qual será o SGB que será utilizado no projeto
+  2. Baixar: npm i {mysql} -D
+
+  3. configuração do plugin
+    - Em plugins/index.js
+  ~~~javascript
+      on('task', { queryDb: query => { return queryTestDb(query, config) }, }); 
+  ~~~
+  4. Utilizando o plugin
+
+  ~~~javascript
+  cy.task('queryDb', `SELECT COUNT(*) as "rowCount" FROM Persons WHERE City="Espoo"`).then((result) => {
+
+            expect(result[0].rowCount).to.equal(1)
+        })
+  ~~~
+
+  5. Criar commands para cada tipo de query SQL
+
+
+
 # Passo a passo para novas implementações:
 
-  TODO
+
+
 
