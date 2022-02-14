@@ -31,7 +31,7 @@
 
 * Users: Um arquivo representando genérico com comando base e os passos que vão ser feito no serviço users
 
-~~~cucumber
+~~~javascript
   import { When, Then, Given, And } from "cypress-cucumber-preprocessor/steps";
 
 
