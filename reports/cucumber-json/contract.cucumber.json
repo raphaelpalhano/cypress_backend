@@ -1,0 +1,252 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Usuários ServeRest",
+    "line": 1,
+    "id": "usuários-serverest",
+    "tags": [],
+    "uri": "contract.feature",
+    "elements": [
+      {
+        "id": "usuários-serverest;requesting-from-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Requesting from serverest API and validating contract",
+        "tags": [
+          {
+            "name": "@get",
+            "line": 6
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 984000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 4,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 254000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "request all the users from /usuarios",
+            "result": {
+              "status": "passed",
+              "duration": 263000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "must be responsed the schema \"get-users\" with status 200",
+            "result": {
+              "status": "passed",
+              "duration": 48000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "usuários-serverest;posting-users-on-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Posting users on serverest API and validating Contract",
+        "tags": [
+          {
+            "name": "@post",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 293000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 4,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 226000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "post the user of type \"invalid\"",
+            "result": {
+              "status": "passed",
+              "duration": 260000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "must be responsed the schema \"post-user\" with status 400",
+            "result": {
+              "status": "passed",
+              "duration": 19000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "usuários-serverest;posting-users-on-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Posting users on serverest API and validating Contract",
+        "tags": [
+          {
+            "name": "@post",
+            "line": 11
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 4,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "post the user of type \"valid\"",
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "must be responsed the schema \"post-user\" with status 201",
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "usuários-serverest;deleting-users-from-serverest-by-invalid",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Deleting users from serverest by invalid",
+        "tags": [
+          {
+            "name": "@delete",
+            "line": 20
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 246000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 4,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 208000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "that have registered a user in the plataform",
+            "result": {
+              "status": "passed",
+              "duration": 243000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "to save the id of one of the users",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "delete the user by the id",
+            "result": {
+              "status": "passed",
+              "duration": 223000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "must be responsed the schema \"delete-user\" with status 200",
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

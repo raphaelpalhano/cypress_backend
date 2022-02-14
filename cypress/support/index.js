@@ -14,7 +14,21 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+
+// utils
+import './commands/utils/schema.validation'
+import './commands/utils/request.control'
+
+//service-commom
+import './commands/service/common/rest.service'
+
+//service-specific
+import './commands/service/users.service'
+
+
+// db-configuration
+import sqlServer from 'cypress-sql-server';
+sqlServer.loadDBCommands();
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

@@ -30,7 +30,3 @@ Cypress.Commands.add('contractValidation', (res, schema, status) => {
         return "Contrato validado com sucesso."
     })
 })
-
-
-
-

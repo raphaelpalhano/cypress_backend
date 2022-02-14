@@ -4,4 +4,5 @@ ajv
 fs-extra
 multiple-cucumber-html-reporter
 rimraf
-faker
+faker-br
+cypress-sql-server

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open",
+    "cy:open": "cypress open ",
     "cy:run": "cypress run",
     "cy:open:prod": "cypress open --env configFile=prod",
     "cy:run:prod": "cypress run --env configFile=prod",
@@ -20,6 +20,7 @@
     "ajv": "^8.9.0",
     "cypress": "^9.4.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-sql-server": "^1.0.0",
     "faker-br": "^0.4.1",
     "fs-extra": "^10.0.0",
     "jsonschema": "^1.4.0",
@@ -28,7 +29,7 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "step_definitions": "cypress/integration/step_definitions/",
+    "step_definitions": "cypress/support/steps",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "reports/cucumber-json"

@@ -1,25 +1,22 @@
 pipeline {
-    agent {
-        docker {
-            image 'cypress/base:latest'
-        }
-    }
+    agent any
+
     stages {
         stage('Setup') {
             steps {
-                sh "npm ci"
+                powershell "npm ci"
             }
         }
-        stage('Tests') {
+        stage('Run tests') {
             steps {
-                sh "npm run cy:tags TAGS=$tags"
+                powershell "npm run cy:run:prod"
             }
         }
     }
     post {
          always {
             script {
-                cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
+               cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
             }
          }
     }
