@@ -127,14 +127,14 @@ Cypress.Commands.add('deleteUser', (id) => {
 
 ~~~~
 
+# Instalação e execução do framework
 
   * Instalar: `npm i {package} --save-dev`.
   * Rodar em modo headless: `npm run cy:run`
   * Rodar em tela gráfica: `npm run cy:open`
   * Gerar o report HTML(sempre após rodar o cypress): `npm run cy:report`
   * Limpar os reports: `npm run cy:clear`
-
-# Para gerar o report html execute os comandos na seguinte ordem:
+  **Para gerar o report html execute os comandos na seguinte ordem:**
   `npm run cy:clear` > `npm run cy:run` > `npm run cy:report`
 
 # Dependências:
