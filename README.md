@@ -46,7 +46,7 @@
    * Clique em save  
 
 
-# Configuração de dados pelo Banco
+# Configuração do plugin para DB
 
   1. Definir qual será o SGB que será utilizado no projeto
   2. Baixar: npm i {mysql} -D
@@ -71,6 +71,27 @@
 
 # Passo a passo para novas implementações:
 
+
+## Estrutura adaptativa
+
+### Feature
+
+**Criar feature relacionado ao serviço**
+
+* Users: Um arquivo feature representa o serviço de Usuários, compondo o CRUD nele.
+
+### Steps
+
+**Um arquivo step que representa todos passos da feature do serviço**
+
+* Users: Um arquivo *users.step.js* representando os passos que vão ser feito no serviço users
+
+### Commands/service
+
+**Um arquivo generalista com command genérico e arquivo de command voltado para o serviço específico**
+
+* rest.serive.js: arquivo com commands genéricos para fazer o CRUD.
+* user.service.js: arquivo voltado para o serviço específico da feature.
 
 
 

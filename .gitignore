@@ -15,6 +15,12 @@ jspm_packages/
 .rts2_cache_umd/
 
 
+# IDEA
+.idea
+.idea/
+
+
+
 
 # VSC
 .vscode/*

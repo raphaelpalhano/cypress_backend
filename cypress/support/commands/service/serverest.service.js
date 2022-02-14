@@ -13,7 +13,7 @@
 */
 
 import Rest from './common/_rest.service'
-import {Factory} from '../fixtures/Factory'
+import {Factory} from '../../../fixtures/factory'
 
 const USERS_URL = '/usuarios'
 const LOGIN_URL = '/login'

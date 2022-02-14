@@ -1,0 +1,6 @@
+{
+    "host": "corePass.net",
+    "user": "admin",
+    "password": "password",
+    "database": "db_name"
+  }
