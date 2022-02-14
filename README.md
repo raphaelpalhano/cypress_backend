@@ -90,6 +90,3 @@
 
 * rest.serive.js: arquivo com commands genéricos para fazer o CRUD.
 * user.service.js: arquivo voltado para o serviço específico da feature.
-
-
-
