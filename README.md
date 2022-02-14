@@ -4,7 +4,7 @@
 # Estrutura do framework
 
 
-## Feature
+## 1. Feature
 
 **Criar feature relacionado ao serviço**
 
@@ -22,17 +22,17 @@
         Given request all the users from /usuarios
         Then must be responsed the schema "get-users" with status 200
 
-~~~~
+~~~
 
 
-## Steps
+## 2. Steps
 
 **Um arquivo step que representa todos passos da feature do serviço**
 
 * Users: Um arquivo representando genérico com comando base e os passos que vão ser feito no serviço users
 
 ~~~javascript
-  import { When, Then, Given, And } from "cypress-cucumber-preprocessor/steps";
+ import { When, Then, Given, And } from "cypress-cucumber-preprocessor/steps";
 
 
   Given(`that register a user type {string}`, (register_type) => {
@@ -58,19 +58,20 @@ Then(
     });
   }
 );
+
 ~~~
 
 
 
 
-## Commands/service
+## 3. Commands/service
 
 **Um arquivo generalista com command genérico e arquivo de command voltado para o serviço específico**
 
 * rest.serive.js: arquivo com commands genéricos para fazer o CRUD.
 
  *cypress/support/commands/service/rest.service.js*
-~~~~javascript
+~~~javascript
 Cypress.Commands.add('requestWithBody', (method, endpoint, body, failOnStatusCode = false, timeout = Cypress.env('global_timeout')) => {
 
     return  cy.request({
@@ -92,13 +93,13 @@ Cypress.Commands.add('requestWithoutBody', (method, endpoint, failOnStatusCode =
         })
 })
 
-~~~~
+~~~
 
 
 * user.service.js: arquivo voltado para o serviço específico da feature.
 
  *cypress/support/commands/service/common/rest.service.js*
-~~~~javascript
+~~~javascript
 Cypress.Commands.add('getAllUsers', () => {
     cy.requestWithoutBody('GET', USERS_URL)
 })
@@ -125,7 +126,12 @@ Cypress.Commands.add('deleteUser', (id) => {
     
 })
 
-~~~~
+~~~
+
+### 5. utils
+  * **utils**
+    - cada arquivo no utils possui uma responsabilidade única
+    - request.control == sobrescreve o request para gerenciar o token
 
 # Instalação e execução do framework
 
