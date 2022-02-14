@@ -80,5 +80,3 @@
 * rest.serive.js: arquivo com commands genéricos para fazer o CRUD.
 * user.service.js: arquivo voltado para o serviço específico da feature.
 
-
-https://github.com/raphaelpalhano/cypress_backend/issues/1#issue-1137791220
