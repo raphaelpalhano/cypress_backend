@@ -1,6 +1,12 @@
 {
-    "host": "corePass.net",
-    "user": "admin",
-    "password": "password",
-    "database": "db_name"
+  "userName": "",
+  "password": "",
+  "server": "",
+  "options": {
+      "database": "",
+      "encrypt": true,
+      "rowCollectionOnRequestCompletion" : true
   }
+
+
+}

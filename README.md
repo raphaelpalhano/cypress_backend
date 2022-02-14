@@ -30,41 +30,30 @@
   * -e tags=@tag (nome da variável de ambiente ou da tag da feature em sí) 
   * -v %cd%:/usr/src/e2e (cria volume entre o container e o pc) 
   ~~~
-
-# Como subir a esteira no Jenkins 
-
-  1. Sistema operacional?
-  Linux == utilizar sh no jenkinsfile
-  Windows == bat
-
-  2. Servidor rodando?
-   * baixe os plugins pipeline/cucumber/github/git/etc
-   * configure o job pelo pipeline --> 
-   * coloque a opção de pipeline por SCM -->
-   * Aponte a URI do repositório
-   * Clique em save  
+ 
 
 
 # Configuração do plugin para DB
 
-  1. Definir qual será o SGB que será utilizado no projeto
-  2. Baixar: npm i {mysql} -D
+  
+  1. Baixar: `npm i cypress-sql-server -D`
 
-  3. configuração do plugin
+  2. configuração do plugin
     - Em plugins/index.js
   ~~~javascript
-      on('task', { queryDb: query => { return queryTestDb(query, config) }, }); 
+      const sqlServer = require('cypress-sql-server');
+      module.exports = (on, config) => {
+      tasks = sqlServer.loadDBPlugin(getConfigurationByFile('db_prod'));
+      on('task', tasks);
+    }
   ~~~
-  4. Utilizando o plugin
+  3. Utilizando o plugin
 
   ~~~javascript
-  cy.task('queryDb', `SELECT COUNT(*) as "rowCount" FROM Persons WHERE City="Espoo"`).then((result) => {
-
-            expect(result[0].rowCount).to.equal(1)
-        })
+    cy.sqlServer('SELECT' 'test').should('eq', 'test');
   ~~~
 
-  5. Criar commands para cada tipo de query SQL
+  4. Criar commands para cada tipo de query SQL
 
 
 

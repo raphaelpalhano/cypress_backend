@@ -26,6 +26,9 @@ import './commands/service/common/rest.service'
 import './commands/service/users.service'
 
 
+// db-configuration
+import sqlServer from 'cypress-sql-server';
+sqlServer.loadDBCommands();
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
