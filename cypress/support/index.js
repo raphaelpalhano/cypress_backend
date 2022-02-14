@@ -14,7 +14,18 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+
+// utils
 import './commands/utils/schema.validation'
+import './commands/utils/request.control'
+
+//service-commom
+import './commands/service/common/rest.service'
+
+//service-specific
+import './commands/service/users.service'
+
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

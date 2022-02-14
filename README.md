@@ -21,12 +21,11 @@
 
 
 # Como rodar o projeto pelo docker:
-  ~~~shell
-  * docker build -t <nome_da_imagem> .
-  * docker container run --rm -it -e tags=@tag -v %cd%:/usr/src/e2e <nome_da_imagem>
-  * docker run -i -v "%cd%":/usr/src/e2e -t <nome_da_imagem> --spec cypress/integration/spec/*.feature 
-  * `O comando acima não funciona no Powershell devido aos dois pontos após %cd%`
-
+  ~~~yml
+  * build: docker build -t <nome_da_imagem> .
+  * Linux-run: docker container run --rm -it -e tags=@tag -v %cd%:/usr/src/e2e <nome_da_imagem>
+  * Windows-run: docker run -i -v "%cd%":/usr/src/e2e -t <nome_da_imagem> --spec cypress/  integration/spec/*.feature 
+  
   * -it (ativa logs) 
   * -e tags=@tag (nome da variável de ambiente ou da tag da feature em sí) 
   * -v %cd%:/usr/src/e2e (cria volume entre o container e o pc) 
@@ -69,24 +68,23 @@
 
 
 
-# Passo a passo para novas implementações:
+
+# Estrutura do framework
 
 
-## Estrutura adaptativa
-
-### Feature
+## Feature
 
 **Criar feature relacionado ao serviço**
 
 * Users: Um arquivo feature representa o serviço de Usuários, compondo o CRUD nele.
 
-### Steps
+## Steps
 
 **Um arquivo step que representa todos passos da feature do serviço**
 
 * Users: Um arquivo *users.step.js* representando os passos que vão ser feito no serviço users
 
-### Commands/service
+## Commands/service
 
 **Um arquivo generalista com command genérico e arquivo de command voltado para o serviço específico**
 

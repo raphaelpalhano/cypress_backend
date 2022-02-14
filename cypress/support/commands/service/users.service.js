@@ -11,30 +11,34 @@
  * The Rest class being extended has methods that performs HTTP requests according to the parameters sent.
  * So we can use it in all '*.services.js' that we need.
 */
-
-import Rest from './common/_rest.service'
 import {Factory} from '../../../fixtures/factory'
 
 const USERS_URL = '/usuarios'
 const LOGIN_URL = '/login'
 
-export class ServeRest extends Rest {
 
-    static getAllUsers(){
-        return super.httpRequestWithoutBody('GET', USERS_URL)
-    }
+Cypress.Commands.add('getAllUsers', () => {
+    cy.requestWithoutBody('GET', USERS_URL)
+})
 
-    static postUserByType(type){
+Cypress.Commands.add('postUserByType', (type) => {
         let body = Factory.getUser(type)
-        return super.httpRequestWithBody('POST', USERS_URL, body)
-    }
+        cy.requestWithBody('POST', USERS_URL, body)
+})
 
-    static loginWith(login_type){
+Cypress.Commands.add('loginWith', (login_type) => {
         let body = Factory.getUserToLogin(login_type)
-        return super.httpRequestWithBody('POST', LOGIN_URL, body)
-    }
+       cy.requestWithBody('POST', LOGIN_URL, body).then((response) => {
+          if( response.body.authorization){
+              Cypress.env('token', response.body.authorization)
+          }
+          return response
+       })
+       
+})
 
-    static deleteUser(id){
-        return super.httpRequestWithoutBody('DELETE', `${USERS_URL}/${id}`)
-    }
-}
+
+Cypress.Commands.add('deleteUser', (id) => {
+    cy.requestWithoutBody('DELETE', `${USERS_URL}/${id}`)
+    
+})

@@ -1,22 +1,22 @@
 /// <reference types="cypress" />
 import { When, Then, Given, And } from "cypress-cucumber-preprocessor/steps";
-import { ServeRest } from "../commands/service/serverest.service";
+
 
 Given(`that register a user type {string}`, (register_type) => {
-  ServeRest.postUserByType(register_type).then((res) => {
+  cy.postUserByType(register_type).then((res) => {
     console.log("CADASTRO >> ", res);
   });
 });
 
 When(`that is logged with {string}`, (login_type) => {
-  ServeRest.loginWith(login_type).then((login_response) => {
+  cy.loginWith(login_type).then((login_response) => {
     expect(login_response.body).to.have.property("message");
     expect(login_response.body.message).to.equal("Login realizado com sucesso");
   });
 });
 
 Given(`that have registered a user in the plataform`, () => {
-  ServeRest.getAllUsers().then((users) => {
+  cy.getAllUsers().then((users) => {
     expect(users.body.quantidade).to.be.greaterThan(1);
     cy.wrap(users).as("Users");
   });
@@ -31,7 +31,7 @@ When(`to save the id of one of the users`, () => {
 
 And(`delete the user by the id`, () => {
   cy.get("@UserID").then((id) => {
-    ServeRest.deleteUser(id).then((res) => {
+    cy.deleteUser(id).then((res) => {
       cy.wrap(res).as("Response");
     });
   });
@@ -39,13 +39,13 @@ And(`delete the user by the id`, () => {
 
 
 Given(`request all the users from /usuarios`, () => {
-  ServeRest.getAllUsers().then((users) => {
+  cy.getAllUsers().then((users) => {
     cy.wrap(users).as("Response");
   });
 });
 
 Given(`post the user of type {string}`, (user_type) => {
-  ServeRest.postUserByType(user_type).then((post_response) => {
+  cy.postUserByType(user_type).then((post_response) => {
     cy.wrap(post_response).as("Response");
   });
 });
