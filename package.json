@@ -23,6 +23,7 @@
     "cypress-sql-server": "^1.0.0",
     "faker-br": "^0.4.1",
     "fs-extra": "^10.0.0",
+    "husky": "4.3",
     "jsonschema": "^1.4.0",
     "multiple-cucumber-html-reporter": "^1.18.3",
     "rimraf": "^3.0.2"
