@@ -2,11 +2,12 @@ Feature: Users ServeRest
    
     Background: Been Logged In
       Given that register a user type "admin"
-      When that is logged with "admin"
+      
 
     @get
     Scenario: Requesting from serverest API and validating contract
-        Given request all the users from /usuarios
+        Given that is logged with "admin"
+        When request all the users from /usuarios
         Then must be responsed the schema "get-users" with status 200
 
     @post

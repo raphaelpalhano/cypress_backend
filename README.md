@@ -6,6 +6,51 @@
 
 ## 1. Feature
 
+### **Padrão do Gherkin**  
+
+  **Given**: Pré-condição, descreve o contexto inicial do cenário, 
+    para introduzir as ações do cenário. 
+  O Given não é utilizado para executar ações, apenas colocar em
+  um estado conhecido do sistema.
+  
+  **Exemplo**
+  ~~~gherkin
+    Scenario Outline: Filtrar produtos no painel de produtos
+      Given efetue login com "standard_user"
+  ~~~
+
+  **When**: Etapa do cenário que descreve um evento ou ação. Podendo
+  ser uma interação com elemento do sistema, ou um evento acionado 
+  poro outro sistema.
+  
+  **Exemplo**
+
+~~~gherkin
+  When filtrar os produtos por "<filtro>"
+~~~
+
+  **And**: Maneira para substituir o When, o Given, quando estes tiverem repetições. É para tornar o cenário mais fluído com a substituição de repetição de outros passos.
+
+  **Exemplo**
+
+~~~gherkin
+When filtrar os produtos por "<filtro>"
+And selecionar o filtro de ordenação
+~~~
+
+  **Then**: Utilizado para descrever o resultado esperado do cenário.
+  A escrita do Then deve ser como uma afirmação para comparar o resultado,
+  real, *que o sistema gerou*, com o resultado esperado *que deveria gerar*.
+  *Um resultado deve ser uma saída observável . Ou seja, algo que vem de fora do sistema (relatório, interface de usuário, a mensagem)*
+
+  **Exemplo**
+  
+~~~gherkin
+    Then deve exibir o produto com nome "Bolsa Av" e preço "R$ 54.55"
+~~~
+<br>
+
+
 **Criar feature relacionado ao serviço**
 
 * Users: Um arquivo feature representa o serviço de Usuários, compondo o CRUD nele.
@@ -15,11 +60,12 @@
    
     Background: Been Logged In
       Given that register a user type "admin"
-      When that is logged with "admin"
+      
 
     @get
     Scenario: Requesting from serverest API and validating contract
-        Given request all the users from /usuarios
+        Given that is logged with "admin"
+        When request all the users from /usuarios
         Then must be responsed the schema "get-users" with status 200
 
 ~~~
@@ -60,8 +106,6 @@ Then(
 );
 
 ~~~
-
-
 
 
 ## 3. Commands/service
@@ -134,6 +178,7 @@ Cypress.Commands.add('deleteUser', (id) => {
     - request.control == sobrescreve o request para gerenciar o token
 
 # Instalação e execução do framework
+
 
   * Instalar: `npm i {package} --save-dev`.
   * Rodar em modo headless: `npm run cy:run`
