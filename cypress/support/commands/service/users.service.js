@@ -42,3 +42,4 @@ Cypress.Commands.add('deleteUser', (id) => {
     cy.requestWithoutBody('DELETE', `${USERS_URL}/${id}`)
     
 })
+
