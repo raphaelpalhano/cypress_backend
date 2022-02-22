@@ -9,8 +9,8 @@
     "cy:open:prod": "cypress open --env configFile=prod",
     "cy:run:prod": "cypress run --env configFile=prod",
     "cy:tags": "cypress-tags run -e",
-    "cy:report": "node ./cypress/support/reporter.js",
-    "cy:clear": "node ./cypress/support/clear.js",
+    "cy:report": "node ./cypress/support/report/reporter.js",
+    "cy:clear": "node ./cypress/support/report/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

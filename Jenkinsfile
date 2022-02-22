@@ -2,22 +2,27 @@ pipeline {
     agent any
 
     stages {
-        stage('Setup') {
+        stage('Build image') {
             steps {
-                powershell "npm ci"
+                script {
+                    dockerapp = docker.build("cypressframework/quality:${env.BUILD_ID}", '-f ./Dockerfile ./')
+                }
+
             }
+            
         }
-        stage('Run tests') {
+        stage('Push Image') {
             steps {
-                powershell "npm run cy:run:prod"
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                        dockerapp.push('latest')
+                        dockerapp.push("${env.BUILD_ID}")
+                    }
+                }
+                
+
             }
         }
     }
-    post {
-         always {
-            script {
-               cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
-            }
-         }
-    }
+    
 }
