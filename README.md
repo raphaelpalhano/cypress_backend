@@ -248,5 +248,11 @@ Cypress.Commands.add('deleteUser', (id) => {
   4. Criar commands para cada tipo de query SQL
 
 
+# Eslint Cypress
 
 
+### Aplicando boas práticas com o eslint
+
+**Fonte**:[eslint-plugin](https://github.com/cypress-io/eslint-plugin-cypress)
+
+**Run** `npm run lint`

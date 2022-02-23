@@ -8,7 +8,7 @@ Given(`that register a user type {string}`, (register_type) => {
   });
 });
 
-When(`that is logged with {string}`, (login_type) => {
+Given(`that is logged with {string}`, (login_type) => {
   cy.loginWith(login_type).then((login_response) => {
     expect(login_response.body).to.have.property("message");
     expect(login_response.body.message).to.equal("Login realizado com sucesso");

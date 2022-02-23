@@ -19,8 +19,13 @@ const fs = require("fs")
 const path = require("path")
 const cucumberJsonDir = "./reports/cucumber-json"
 const screenshotsDir = "./reports/screenshots/spec"
-const jsonPath = path.join(__dirname, "../..", cucumberJsonDir)
-const screenshotsPath = path.join(__dirname, "../..", screenshotsDir)
+if(!fs.existsSync(screenshotsDir)){
+    fs.mkdirSync(screenshotsDir, {
+        recursive: true
+    })
+}
+const jsonPath = path.join(__dirname, "../../../", cucumberJsonDir)
+const screenshotsPath = path.join(__dirname, "../../../", screenshotsDir)
 const files = fs.readdirSync(jsonPath)
 const jsonNames = {}
 const cukeMap = {}
@@ -35,10 +40,6 @@ files.forEach(file => {
     cukeMap[feature] = json
     featureToFileMap[feature] = file
 })
-
-if (!fs.existsSync(screenshotsPath)) {
-    fs.mkdirSync(screenshotsPath)
-}
 
 const failingFeatures = fs.readdirSync(path.join(screenshotsPath))
 failingFeatures.forEach(feature => {
