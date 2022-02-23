@@ -250,3 +250,11 @@ Cypress.Commands.add('deleteUser', (id) => {
 
 
 
+# Eslint Cypress
+
+
+### Aplicando boas práticas com o eslint
+
+**Fonte**:[eslint-plugin](https://github.com/cypress-io/eslint-plugin-cypress)
+
+**Run** `npm run lint`
