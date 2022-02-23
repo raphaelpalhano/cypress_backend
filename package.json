@@ -12,7 +12,8 @@
     "cy:report": "node ./cypress/support/report/reporter.js",
     "cy:clear": "node ./cypress/support/report/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix --ext .js,.jsx ."
+    "lint": "eslint --fix --ext .js,.jsx .",
+    "performance": "k6 run performance/src/groups/login.group.js"
   },
   "keywords": [],
   "author": "Leonardo Kartabil",
@@ -27,6 +28,7 @@
     "fs-extra": "^10.0.0",
     "husky": "4.3",
     "jsonschema": "^1.4.0",
+    "k6": "*",
     "multiple-cucumber-html-reporter": "^1.18.3",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2"

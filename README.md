@@ -248,8 +248,6 @@ Cypress.Commands.add('deleteUser', (id) => {
   4. Criar commands para cada tipo de query SQL
 
 
-
-
 # Eslint Cypress
 
 
