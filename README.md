@@ -39,8 +39,7 @@ And selecionar o filtro de ordenação
 ~~~
 
   **Then**: Utilizado para descrever o resultado esperado do cenário.
-  A escrita do Then deve ser como uma afirmação para comparar o resultado,
-  real, *que o sistema gerou*, com o resultado esperado *que deveria gerar*.
+  A escrita do Then deve ser como uma afirmação para comparar o resultado, real, que o sistema gerou, com o resultado esperado que deveria gerar.
   *Um resultado deve ser uma saída observável . Ou seja, algo que vem de fora do sistema (relatório, interface de usuário, a mensagem)*
 
   **Exemplo**
@@ -88,19 +87,25 @@ And selecionar o filtro de ordenação
 
 **Um arquivo step que representa todos passos da feature do serviço**
 
-* Users: Um arquivo representando genérico com comando base e os passos que vão ser feito no serviço users
+* Users: Um arquivo representando os passos que vão ser feito para o serviço users. Cada passo aqui faz parte de uma requisição direta na API, portanto aplica-se a ideia de CRUD para validar o critério de aceite levantado pelo PO.
+
+
+**Padronização:**
+
+`Aspas duplas:` para textos com parâmetros
+`Aspas simples:` textos sem parâmetro
 
 ~~~javascript
  import { When, Then, Given, And } from "cypress-cucumber-preprocessor/steps";
 
 
-  Given(`that register a user type {string}`, (register_type) => {
+  Given("that register a user type {string}", (register_type) => {
     cy.postUserByType(register_type).then((res) => {
       console.log("CADASTRO >> ", res);
     });
   });
 
-  When(`that is logged with {string}`, (login_type) => {
+  When("that is logged with {string}", (login_type) => {
     cy.loginWith(login_type).then((login_response) => {
       expect(login_response.body).to.have.property("message");
       expect(login_response.body.message).to.equal("Login realizado com sucesso");
@@ -108,7 +113,7 @@ And selecionar o filtro de ordenação
   });
 
 Then(
-  `must be responsed the schema {string} with status {int}`,
+  "must be responsed the schema {string} with status {int}",
   (schema, status) => {
     cy.get("@Response").then((res) => {
       cy.contractValidation(res, schema, status).then((validation) => {

@@ -1,0 +1,222 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Users ServeRest",
+    "line": 1,
+    "id": "users-serverest",
+    "tags": [],
+    "uri": "Users.feature",
+    "elements": [
+      {
+        "id": "users-serverest;requesting-from-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Requesting from serverest API and validating contract",
+        "tags": [
+          {
+            "name": "@get",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 699000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 212000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "request all the users from /usuarios",
+            "result": {
+              "status": "passed",
+              "duration": 197000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "must be responsed the schema \"get-users\" with status 200",
+            "result": {
+              "status": "passed",
+              "duration": 39000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-serverest;posting-users-on-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Posting users on serverest API and validating Contract",
+        "tags": [
+          {
+            "name": "@post",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 231000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "post the user of type \"invalid\"",
+            "result": {
+              "status": "passed",
+              "duration": 240000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "must be responsed the schema \"post-user\" with status 400",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-serverest;posting-users-on-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Posting users on serverest API and validating Contract",
+        "tags": [
+          {
+            "name": "@post",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 294000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "post the user of type \"valid\"",
+            "result": {
+              "status": "passed",
+              "duration": 205000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "must be responsed the schema \"post-user\" with status 201",
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-serverest;deleting-users-from-serverest-by-invalid",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Deleting users from serverest by invalid",
+        "tags": [
+          {
+            "name": "@delete",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 205000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "that have registered a user in the plataform",
+            "result": {
+              "status": "passed",
+              "duration": 208000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "to save the id of one of the users",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "delete the user by the id",
+            "result": {
+              "status": "passed",
+              "duration": 280000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "must be responsed the schema \"delete-user\" with status 200",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
