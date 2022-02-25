@@ -27,37 +27,93 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 594000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 9,
-            "name": "that is logged with \"admin\"",
-            "result": {
-              "status": "passed",
-              "duration": 194000000
+              "duration": 514000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 5,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 187000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
             "name": "request all the users from /usuarios",
             "result": {
               "status": "passed",
-              "duration": 183000000
+              "duration": 197000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
-            "name": "must be responsed the schema \"get-users\" with status 200",
+            "line": 10,
+            "name": "must be responsed the schema \"users\" with request \"reseach\"",
+            "result": {
+              "status": "failed",
+              "duration": 231000000,
+              "error_message": "Error: A fixture file could not be found at any of the following paths:\n\n  \u001b[90m  > \u001b[39m\u001b[94mcypress\\fixtures\\schema\\users\\reseach.json\u001b[39m\n  \u001b[90m  > \u001b[39m\u001b[94mcypress\\fixtures\\schema\\users\\reseach.json\u001b[39m.[ext]\n\nCypress looked for these file extensions at the provided path:\n\n  \u001b[90m  > \u001b[39m\u001b[94m.json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\u001b[39m\n\nProvide a path to an existing fixture file.\n    at Object.<anonymous> (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\lib\\fixture.js:63:23)\n    at Object.tryCatcher (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at Promise._settlePromiseFromHandler (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:547:31)\n    at Promise._settlePromise (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:604:18)\n    at Promise._settlePromise0 (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:649:10)\n    at Promise._settlePromises (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:729:18)\n    at Promise._fulfill (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\promise.js:673:18)\n    at C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\bluebird\\js\\release\\nodeback.js:42:21\n    at f (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\node_modules\\once\\once.js:25:25)\n    at Glob.<anonymous> (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:151:7)\n    at Glob.emit (node:events:394:28)\n    at Glob._finish (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:197:8)\n    at done (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:182:14)\n    at Glob._processSimple2 (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:688:12)\n    at C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:676:10\n    at Glob._stat2 (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:772:12)\n    at lstatcb_ (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\packages\\server\\node_modules\\glob\\glob.js:764:12)\n    at RES (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\node_modules\\inflight\\inflight.js:31:16)\n    at f (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\node_modules\\once\\once.js:25:25)\n    at callback (C:\\Users\\raphael.arevalos\\AppData\\Local\\Cypress\\Cache\\9.5.0\\Cypress\\resources\\app\\node_modules\\graceful-fs\\polyfills.js:299:20)\n    at FSReqCallback.oncomplete (node:fs:195:21)\n"
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-serverest;posting-users-on-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Posting users on serverest API and validating Contract",
+        "tags": [
+          {
+            "name": "@post",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 253000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 184000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "post the user of type \"invalid\"",
+            "result": {
+              "status": "passed",
+              "duration": 179000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "must be responsed the schema \"users\" with request \"createError\"",
+            "result": {
+              "status": "passed",
+              "duration": 31000000
             }
           }
         ]
@@ -70,7 +126,7 @@
         "tags": [
           {
             "name": "@post",
-            "line": 13
+            "line": 12
           }
         ],
         "type": "scenario",
@@ -82,72 +138,37 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 202000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "post the user of type \"invalid\"",
+            "keyword": "When ",
+            "line": 5,
+            "name": "that is logged with \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 199000000
+              "duration": 186000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "must be responsed the schema \"post-user\" with status 400",
-            "result": {
-              "status": "passed",
-              "duration": 9000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "users-serverest;posting-users-on-serverest-api-and-validating-contract",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Posting users on serverest API and validating Contract",
-        "tags": [
-          {
-            "name": "@post",
-            "line": 13
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "that register a user type \"admin\"",
-            "result": {
-              "status": "passed",
-              "duration": 206000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
+            "keyword": "When ",
+            "line": 14,
             "name": "post the user of type \"valid\"",
             "result": {
               "status": "passed",
-              "duration": 190000000
+              "duration": 179000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
-            "name": "must be responsed the schema \"post-user\" with status 201",
+            "line": 15,
+            "name": "must be responsed the schema \"users\" with request \"create\"",
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 8000000
             }
           }
         ]
@@ -155,12 +176,12 @@
       {
         "id": "users-serverest;deleting-users-from-serverest-by-invalid",
         "keyword": "Scenario",
-        "line": 23,
+        "line": 22,
         "name": "Deleting users from serverest by invalid",
         "tags": [
           {
             "name": "@delete",
-            "line": 22
+            "line": 21
           }
         ],
         "type": "scenario",
@@ -172,44 +193,54 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 204000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 24,
-            "name": "that have registered a user in the plataform",
-            "result": {
-              "status": "passed",
-              "duration": 191000000
+              "duration": 197000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
+            "line": 5,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 187000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "that have registered a user in the plataform",
+            "result": {
+              "status": "passed",
+              "duration": 201000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
             "name": "to save the id of one of the users",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 3000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 26,
+            "line": 25,
             "name": "delete the user by the id",
             "result": {
               "status": "passed",
-              "duration": 182000000
+              "duration": 192000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
-            "name": "must be responsed the schema \"delete-user\" with status 200",
+            "line": 26,
+            "name": "must be responsed the schema \"users\" with request \"delete\"",
             "result": {
               "status": "passed",
               "duration": 9000000
