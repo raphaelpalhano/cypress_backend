@@ -16,7 +16,7 @@
     "performance": "k6 run performance/src/groups/login.group.js"
   },
   "keywords": [],
-  "author": "Leonardo Kartabil",
+  "author": "Leonardo Kartabil & adaptado por Raphael",
   "license": "ISC",
   "devDependencies": {
     "ajv": "^8.9.0",

@@ -26,6 +26,7 @@ When('to save the id of one of the users', () => {
   cy.get("@Users").then((users) => {
     cy.log("ID DO USUARIO >> ", users.body.usuarios[0]._id);
     cy.wrap(users.body.usuarios[0]._id).as("UserID");
+    
   });
 });
 
