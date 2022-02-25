@@ -7,16 +7,16 @@ Feature: Users ServeRest
     @get
     Scenario: Requesting from serverest API and validating contract
         When request all the users from /usuarios
-        Then must be responsed the schema "users" with request "get"
+        Then must be responsed the schema "users" with request "reseach"
 
     @post
     Scenario Outline: Posting users on serverest API and validating Contract
         When post the user of type "<type>"
         Then must be responsed the schema "users" with request "<request>"
         Examples:
-            | type    | request    |
-            | invalid | postError  |
-            | valid   | post       |
+            | type    | request       |
+            | invalid | create_error  |
+            | valid   | create        |
 
     @delete
     Scenario: Deleting users from serverest by invalid
