@@ -15,7 +15,7 @@ Feature: Users ServeRest
         Then must be responsed the schema "users" with request "<request>"
         Examples:
             | type    | request       |
-            | invalid | create_error  |
+            | invalid | createError   |
             | valid   | create        |
 
     @delete
