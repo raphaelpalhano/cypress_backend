@@ -27,37 +27,92 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 594000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 9,
-            "name": "that is logged with \"admin\"",
-            "result": {
-              "status": "passed",
-              "duration": 194000000
+              "duration": 533000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 10,
+            "line": 5,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 198000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
             "name": "request all the users from /usuarios",
             "result": {
               "status": "passed",
-              "duration": 183000000
+              "duration": 197000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 10,
             "name": "must be responsed the schema \"get-users\" with status 200",
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 31000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "users-serverest;posting-users-on-serverest-api-and-validating-contract",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Posting users on serverest API and validating Contract",
+        "tags": [
+          {
+            "name": "@post",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "that register a user type \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 203000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 185000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "post the user of type \"invalid\"",
+            "result": {
+              "status": "passed",
+              "duration": 189000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "must be responsed the schema \"post-user\" with status 400",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
             }
           }
         ]
@@ -70,7 +125,7 @@
         "tags": [
           {
             "name": "@post",
-            "line": 13
+            "line": 12
           }
         ],
         "type": "scenario",
@@ -87,19 +142,29 @@
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "post the user of type \"invalid\"",
+            "keyword": "When ",
+            "line": 5,
+            "name": "that is logged with \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 199000000
+              "duration": 190000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "post the user of type \"valid\"",
+            "result": {
+              "status": "passed",
+              "duration": 188000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
-            "name": "must be responsed the schema \"post-user\" with status 400",
+            "line": 15,
+            "name": "must be responsed the schema \"post-user\" with status 201",
             "result": {
               "status": "passed",
               "duration": 9000000
@@ -108,59 +173,14 @@
         ]
       },
       {
-        "id": "users-serverest;posting-users-on-serverest-api-and-validating-contract",
-        "keyword": "Scenario",
-        "line": 20,
-        "name": "Posting users on serverest API and validating Contract",
-        "tags": [
-          {
-            "name": "@post",
-            "line": 13
-          }
-        ],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "that register a user type \"admin\"",
-            "result": {
-              "status": "passed",
-              "duration": 206000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 15,
-            "name": "post the user of type \"valid\"",
-            "result": {
-              "status": "passed",
-              "duration": 190000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 16,
-            "name": "must be responsed the schema \"post-user\" with status 201",
-            "result": {
-              "status": "passed",
-              "duration": 10000000
-            }
-          }
-        ]
-      },
-      {
         "id": "users-serverest;deleting-users-from-serverest-by-invalid",
         "keyword": "Scenario",
-        "line": 23,
+        "line": 22,
         "name": "Deleting users from serverest by invalid",
         "tags": [
           {
             "name": "@delete",
-            "line": 22
+            "line": 21
           }
         ],
         "type": "scenario",
@@ -172,23 +192,33 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 204000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 24,
-            "name": "that have registered a user in the plataform",
-            "result": {
-              "status": "passed",
-              "duration": 191000000
+              "duration": 202000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 25,
+            "line": 5,
+            "name": "that is logged with \"admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 185000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "that have registered a user in the plataform",
+            "result": {
+              "status": "passed",
+              "duration": 195000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
             "name": "to save the id of one of the users",
             "result": {
               "status": "passed",
@@ -198,21 +228,21 @@
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 26,
+            "line": 25,
             "name": "delete the user by the id",
             "result": {
               "status": "passed",
-              "duration": 182000000
+              "duration": 193000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
+            "line": 26,
             "name": "must be responsed the schema \"delete-user\" with status 200",
             "result": {
               "status": "passed",
-              "duration": 9000000
+              "duration": 8000000
             }
           }
         ]
