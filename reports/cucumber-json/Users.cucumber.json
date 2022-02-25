@@ -27,7 +27,7 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 558000000
+              "duration": 626000000
             }
           },
           {
@@ -37,7 +37,7 @@
             "name": "that is logged with \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 192000000
+              "duration": 194000000
             }
           },
           {
@@ -47,7 +47,7 @@
             "name": "request all the users from /usuarios",
             "result": {
               "status": "passed",
-              "duration": 196000000
+              "duration": 204000000
             }
           },
           {
@@ -57,7 +57,7 @@
             "name": "must be responsed the schema \"users\" with request \"get\"",
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 32000000
             }
           }
         ]
@@ -82,7 +82,7 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 202000000
+              "duration": 201000000
             }
           },
           {
@@ -92,7 +92,7 @@
             "name": "that is logged with \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 198000000
+              "duration": 184000000
             }
           },
           {
@@ -102,14 +102,14 @@
             "name": "post the user of type \"invalid\"",
             "result": {
               "status": "passed",
-              "duration": 186000000
+              "duration": 189000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 15,
-            "name": "must be responsed the schema \"users\" with request post_error",
+            "name": "must be responsed the schema \"users\" with request postError",
             "result": {
               "status": "undefined"
             }
@@ -146,7 +146,7 @@
             "name": "that is logged with \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 190000000
+              "duration": 199000000
             }
           },
           {
@@ -156,7 +156,7 @@
             "name": "post the user of type \"valid\"",
             "result": {
               "status": "passed",
-              "duration": 182000000
+              "duration": 186000000
             }
           },
           {
@@ -190,7 +190,7 @@
             "name": "that register a user type \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 218000000
+              "duration": 245000000
             }
           },
           {
@@ -200,7 +200,7 @@
             "name": "that is logged with \"admin\"",
             "result": {
               "status": "passed",
-              "duration": 184000000
+              "duration": 196000000
             }
           },
           {
@@ -210,7 +210,7 @@
             "name": "that have registered a user in the plataform",
             "result": {
               "status": "passed",
-              "duration": 192000000
+              "duration": 198000000
             }
           },
           {
@@ -220,7 +220,7 @@
             "name": "to save the id of one of the users",
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 5000000
             }
           },
           {
@@ -230,7 +230,7 @@
             "name": "delete the user by the id",
             "result": {
               "status": "passed",
-              "duration": 187000000
+              "duration": 192000000
             }
           },
           {
@@ -240,7 +240,7 @@
             "name": "must be responsed the schema \"users\" with request \"delete\"",
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 9000000
             }
           }
         ]

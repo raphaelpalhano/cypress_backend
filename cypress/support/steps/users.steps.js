@@ -50,14 +50,11 @@ When('request all the users from /usuarios', () => {
 });
 
 Given("post the user of type {string}", (user_type) => {
-  
   cy.postUserByType(user_type).then((post_response) => {
-    console.log('aquui')
-    console.log(post_response)
     cy.wrap(post_response).as("Response");
-    
   });
 });
+
 
 Then("must be responsed the schema {string} with request {string}",
   (service, request) => {
