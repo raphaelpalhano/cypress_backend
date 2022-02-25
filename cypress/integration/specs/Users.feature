@@ -12,7 +12,7 @@ Feature: Users ServeRest
     @post
     Scenario Outline: Posting users on serverest API and validating Contract
         When post the user of type "<type>"
-        Then must be responsed the schema "users" with request <request>
+        Then must be responsed the schema "users" with request "<request>"
         Examples:
             | type    | request    |
             | invalid | postError  |
