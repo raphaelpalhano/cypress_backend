@@ -15,17 +15,17 @@
 */
 
 const report = require('multiple-cucumber-html-reporter');
-const fs = require("fs")
-const path = require("path")
-const cucumberJsonDir = "./reports/cucumber-json"
-const screenshotsDir = "./reports/screenshots/spec"
+const fs = require('fs')
+const path = require('path')
+const cucumberJsonDir = './reports/cucumber-json'
+const screenshotsDir = './reports/screenshots/spec'
 if(!fs.existsSync(screenshotsDir)){
     fs.mkdirSync(screenshotsDir, {
         recursive: true
     })
 }
-const jsonPath = path.join(__dirname, "../../../", cucumberJsonDir)
-const screenshotsPath = path.join(__dirname, "../../../", screenshotsDir)
+const jsonPath = path.join(__dirname, '../../../', cucumberJsonDir)
+const screenshotsPath = path.join(__dirname, '../../../', screenshotsDir)
 const files = fs.readdirSync(jsonPath)
 const jsonNames = {}
 const cukeMap = {}
@@ -35,7 +35,7 @@ files.forEach(file => {
     const json = JSON.parse(
         fs.readFileSync(path.join(jsonPath, file)).toString()
     )
-    const feature = json[0].uri.split("/").reverse()[0]
+    const feature = json[0].uri.split('/').reverse()[0]
     jsonNames[feature] = file
     cukeMap[feature] = json
     featureToFileMap[feature] = file
@@ -50,17 +50,17 @@ failingFeatures.forEach(feature => {
             e => e.name === scenarioName
         )
         const myStep = myScenario.steps.find(
-            step => step.result.status !== "passed"
+            step => step.result.status !== 'passed'
         )
         const data = fs.readFileSync(
             path.join(screenshotsPath, feature, screenshot)
         )
         if (data) {
-            const base64Image = Buffer.from(data, "binary").toString("base64")
+            const base64Image = Buffer.from(data, 'binary').toString('base64')
             myStep.embeddings = []
             myStep.embeddings.push({
                 data: base64Image,
-                mime_type: "image/png"
+                mime_type: 'image/png'
             })
         }
         fs.writeFileSync(
@@ -71,9 +71,9 @@ failingFeatures.forEach(feature => {
 })
 
 report.generate({
-	jsonDir: 'reports/cucumber-json/',
-	reportPath: 'reports/html/',
-    pageFooter: "<div></div>",
+    jsonDir: 'reports/cucumber-json/',
+    reportPath: 'reports/html/',
+    pageFooter: '<div></div>',
     openReportInBrowser: false,
     displayDuration: true,
     displayReportTime: true,

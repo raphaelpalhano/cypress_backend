@@ -27,10 +27,10 @@ export default function() {
 
     
     let response = http.post(baseServer.url, 
-    {
-        body: users.generateUser(),
-        headers: { 'Content-Type': 'application/json' }
-    });
+        {
+            body: users.generateUser(),
+            headers: { 'Content-Type': 'application/json' }
+        });
     // métrica de duração:
     loginDuration.add(response.timings.duration);
     
@@ -49,7 +49,7 @@ export default function() {
     if(!check(response, {
         'máximo de duração': (res) => res.timings.duration < baseServer.timeout
     })){
-       fail(`A requisição passou o limite do tempo ${baseServer.timeout}`) 
+        fail(`A requisição passou o limite do tempo ${baseServer.timeout}`) 
     }
 
     sleep(1);

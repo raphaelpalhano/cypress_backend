@@ -23,19 +23,19 @@ Cypress.Commands.add('getAllUsers', () => {
 })
 
 Cypress.Commands.add('postUserByType', (type) => {
-        let body = Factory.getUser(type)
-        cy.requestWithBody('POST', USERS_URL, body)
+    let body = Factory.getUser(type)
+    cy.requestWithBody('POST', USERS_URL, body)
 })
 
 Cypress.Commands.add('loginWith', (login_type) => {
-        let body = Factory.getUserToLogin(login_type)
-       cy.requestWithBody('POST', LOGIN_URL, body).then((response) => {
-          if( response.body.authorization){
+    let body = Factory.getUserToLogin(login_type)
+    cy.requestWithBody('POST', LOGIN_URL, body).then((response) => {
+        if( response.body.authorization){
            
-              Cypress.env('token', response.body.authorization)
-          }
-          return response
-       })
+            Cypress.env('token', response.body.authorization)
+        }
+        return response
+    })
        
 })
 
