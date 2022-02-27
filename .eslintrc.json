@@ -29,9 +29,10 @@
           4
         ],
         "quotes": [
-          "error",
-          "single"
-        ]
+          "error" ,  
+          "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  } 
+         ] 
+       
       }
       
 }
