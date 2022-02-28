@@ -2,7 +2,7 @@
     "plugins": [
       "cypress"
     ],
-    
+
     "extends": [
         "plugin:cypress/recommended"
     ],
@@ -12,7 +12,7 @@
     },
 
     "rules": {
-        "cypress/no-assigning-return-values": "error", 
+        "cypress/no-assigning-return-values": "error",
         "cypress/no-unnecessary-waiting": "error", //use alias: cy.get(user).as(user) cy.wait(@user)
         "cypress/assertion-before-screenshot": "warn",
         "cypress/no-force": "warn",
@@ -29,10 +29,11 @@
           4
         ],
         "quotes": [
-          "error" ,  
-          "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  } 
-         ] 
-       
+          "error" ,
+          "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  }
+         ],
+         "semi": [2, "always"]
+
       }
-      
+
 }

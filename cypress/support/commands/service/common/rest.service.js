@@ -1,4 +1,4 @@
-Cypress.Commands.add('requestWithBody', 
+Cypress.Commands.add('requestWithBody',
     (method, endpoint, body, failOnStatusCode = false, timeout = Cypress.env('global_timeout')) => {
 
         return  cy.request({
@@ -7,16 +7,16 @@ Cypress.Commands.add('requestWithBody',
             body: body,
             failOnStatusCode: failOnStatusCode,
             timeout: timeout
-        })
-    })
+        });
+    });
 
 
-Cypress.Commands.add('requestWithoutBody', 
+Cypress.Commands.add('requestWithoutBody',
     (method, endpoint, failOnStatusCode = false, timeout = Cypress.env('global_timeout')) => {
         return cy.request({
             method: method,
             url: endpoint,
             failOnStatusCode: failOnStatusCode,
             timeout: timeout
-        })
-    })
+        });
+    });
