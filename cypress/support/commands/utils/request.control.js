@@ -20,9 +20,9 @@ Cypress.Commands.overwrite('request', (originalFunction, ...options) => {
         if(Cypress.env('token')){
             options[0].headers = {
                 Authorization: `${Cypress.env('token')}`
-            }
+            };
         }
     }
 
-    return originalFunction(...options)
-})
+    return originalFunction(...options);
+});

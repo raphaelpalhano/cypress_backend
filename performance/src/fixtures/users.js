@@ -5,7 +5,7 @@ export default{
         return data;
     }
    
-}  
+};  
 
 
 const controlUsers = (user) => {
@@ -14,11 +14,11 @@ const controlUsers = (user) => {
         return  {
             email: 'fulano@qa.com', 
             password: 'teste' 
-        }
+        };
     case 'invalid':
         return {
             email: 'invalido@gmail.com',
             password: '12qasdcz21'
-        }
+        };
     }
-}
+};

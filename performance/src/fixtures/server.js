@@ -1,7 +1,7 @@
 export default {
 
     serverGenerator: (env) => {
-        const serverData = typeof env !== 'undefined' ? controlEnv(env) 
+        const serverData = typeof env !== 'undefined' ? controlEnv(env)
             : {
                 url: 'https://serverest.dev/login',
                 schema: '',
@@ -9,8 +9,8 @@ export default {
             };
         return serverData;
     }
-    
-}
+
+};
 
 const controlEnv = (env) => {
     switch (env){
@@ -18,21 +18,21 @@ const controlEnv = (env) => {
         return {
             url: 'https://serverest.dev/login',
             schema: '',
-            timeout: 3000
-        }
+            timeout: 5000
+        };
     case 'homolog':
         return {
             url: 'https://serverest.dev/',
             schema: '',
             timeout: 5000
-        }
+        };
     case 'dev':
         return {
             url: 'https://serverest.dev/',
             schema: '',
             timeout: 2000
-        }
-        
-        
+        };
+
+
     }
-}
+};

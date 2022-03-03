@@ -1,4 +1,4 @@
-import faker from 'faker-br'
+import faker from 'faker-br';
 
 export class Factory {
 
@@ -8,17 +8,17 @@ export class Factory {
             return {
                 'email': 'fulano@qa.com',
                 'password': 'teste'
-            }
+            };
         case 'empty':
             return {
                 'email': '',
                 'password': ''
-            }
+            };
         case 'invalid':
             return {
                 'email': faker.internet.email(),
                 'password': faker.internet.password()
-            }
+            };
         }
     }
 
@@ -30,30 +30,30 @@ export class Factory {
                 'email': 'fulano@qa.com',
                 'password': 'teste',
                 'administrador': 'true'
-            }
+            };
         case 'valid':
             return {
                 'nome': faker.name.findName(),
                 'email': faker.internet.email(),
                 'password': faker.internet.password(),
                 'administrador': admin.toString(),
-            }
+            };
         case 'invalid':
             return {
                 'nome': 'Fulano da Silva',
                 'email': 'beltrano@qa.com.br',
                 'password': 'teste',
                 'administrador': 'true'
-            }
+            };
         case 'empty':
             return {
                 'nome': '',
                 'email': '',
                 'password': '',
                 'administrador': admin.toString()
-            }
+            };
         default:
-            return { notfound:'The user type was not found, please verify!' }
+            return { notfound:'The user type was not found, please verify!' };
         }
     }
 }

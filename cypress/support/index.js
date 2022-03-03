@@ -16,14 +16,14 @@
 // Import commands.js using ES2015 syntax:
 
 // utils
-import './commands/utils/schema.validation'
-import './commands/utils/request.control'
+import './commands/utils/schema.validation';
+import './commands/utils/request.control';
 
 //service-commom
-import './commands/service/common/rest.service'
+import './commands/service/common/rest.service';
 
 //service-specific
-import './commands/service/users.service'
+import './commands/service/users.service';
 
 
 // db-configuration
@@ -37,8 +37,8 @@ Cypress.Server.defaults({
     delay: 500,
     force404: false,
     whitelist: () => true,
-})
+});
   
 Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-})
+    return false;
+});
