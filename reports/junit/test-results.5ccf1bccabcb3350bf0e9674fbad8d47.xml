@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.2390" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-03-03T22:17:46" tests="0" file="cypress/integration/specs/Users.feature" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Users ServeRest" timestamp="2022-03-03T22:17:46" tests="4" time="3.2220" failures="0">
+    <testcase name="Users ServeRest Requesting from serverest API and validating contract" time="1.1290" classname="Requesting from serverest API and validating contract">
+    </testcase>
+    <testcase name="Users ServeRest Posting users on serverest API and validating Contract (example #1)" time="0.6700" classname="Posting users on serverest API and validating Contract (example #1)">
+    </testcase>
+    <testcase name="Users ServeRest Posting users on serverest API and validating Contract (example #2)" time="0.5890" classname="Posting users on serverest API and validating Contract (example #2)">
+    </testcase>
+    <testcase name="Users ServeRest Deleting users from serverest by invalid" time="0.7970" classname="Deleting users from serverest by invalid">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -12,10 +12,16 @@ steps:
 
 - script: |
     npm ci
-  displayName: 'Install dependencies'
+  displayName: 'Install Dependencies'
 - script: |
     npm run cy:run
-  displayName: 'Run tests'
-- script: |
-    npm run cy:report
-  displayName: 'Generate reports'
+  continueOnError: true
+  displayName: 'Run Tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/reports/junit'
+    mergeTestResults: true
+    testRunTitle: 'Publish Test Results'
