@@ -6,13 +6,13 @@
 
 ## 1. Feature
 
-### **Padrão do Gherkin**  
+### **Padrão do Gherkin**
 
-  **Given**: Pré-condição, descreve o contexto inicial do cenário, 
-    para introduzir as ações do cenário. 
+  **Given**: Pré-condição, descreve o contexto inicial do cenário,
+    para introduzir as ações do cenário.
   O Given não é utilizado para executar ações, apenas colocar em
   um estado conhecido do sistema.
-  
+
   **Exemplo**
   ~~~gherkin
     Scenario Outline: Filtrar produtos no painel de produtos
@@ -20,9 +20,9 @@
   ~~~
 
   **When**: Etapa do cenário que descreve um evento ou ação. Podendo
-  ser uma interação com elemento do sistema, ou um evento acionado 
+  ser uma interação com elemento do sistema, ou um evento acionado
   poro outro sistema.
-  
+
   **Exemplo**
 
 ~~~gherkin
@@ -43,7 +43,7 @@ And selecionar o filtro de ordenação
   *Um resultado deve ser uma saída observável . Ou seja, algo que vem de fora do sistema (relatório, interface de usuário, a mensagem)*
 
   **Exemplo**
-  
+
 ~~~gherkin
     Then deve exibir o produto com nome "Bolsa Av" e preço "R$ 54.55"
 ~~~
@@ -52,10 +52,10 @@ And selecionar o filtro de ordenação
  **background**: O background é a maneira de contextualizar os cenários. Se você observou que há muita repetição de algum step,
  o background pode ser útil, para introduzir o contexto ao cenário. Nesse sentido, ele define os passos que vão ser feitos para
  iniciar o cenário.
- 
+
 
   **Exemplo**
-  
+
 ~~~gherkin
     Background: Been Logged In
       Given that register a user type "admin"
@@ -69,10 +69,10 @@ And selecionar o filtro de ordenação
 
 ~~~gherkin
       Feature: Users ServeRest
-   
+
     Background: Been Logged In
       Given that register a user type "admin"
-      
+
 
     @get
     Scenario: Requesting from serverest API and validating contract
@@ -179,13 +179,13 @@ Cypress.Commands.add('loginWith', (login_type) => {
           }
           return response
        })
-       
+
 })
 
 
 Cypress.Commands.add('deleteUser', (id) => {
     cy.requestWithoutBody('DELETE', `${USERS_URL}/${id}`)
-    
+
 })
 
 ~~~
@@ -221,18 +221,18 @@ Cypress.Commands.add('deleteUser', (id) => {
   ~~~yml
   * build: docker build -t <nome_da_imagem> .
   * Linux-run: docker container run --rm -it -e tags=@tag -v %cd%:/usr/src/e2e <nome_da_imagem>
-  * Windows-run: docker run -i -v "%cd%":/usr/src/e2e -t <nome_da_imagem> --spec cypress/  integration/spec/*.feature 
-  
-  * -it (ativa logs) 
-  * -e tags=@tag (nome da variável de ambiente ou da tag da feature em sí) 
-  * -v %cd%:/usr/src/e2e (cria volume entre o container e o pc) 
+  * Windows-run: docker run -i -v "%cd%":/cypress_backend -t <nome_da_imagem> --spec cypress/  integration/spec/*.feature
+
+  * -it (ativa logs)
+  * -e tags=@tag (nome da variável de ambiente ou da tag da feature em sí)
+  * -v %cd%:/usr/src/e2e (cria volume entre o container e o pc)
   ~~~
- 
+
 
 
 # Configuração do plugin para DB
 
-  
+
   1. Baixar: `npm i cypress-sql-server -D`
 
   2. configuração do plugin

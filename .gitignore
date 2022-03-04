@@ -1,3 +1,11 @@
+# CYPRESS
+
+reports/html/
+
+reports/junit/
+
+reports/cucumber-json/
+
 # NODE
 
 
@@ -8,7 +16,7 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
-reports/html/
+
 
 # Microbundle cache
 .rpt2_cache/
