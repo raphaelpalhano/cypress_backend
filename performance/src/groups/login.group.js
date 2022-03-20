@@ -5,9 +5,9 @@ import {setup} from '../config/setup.js';
 export const options = setup('low');
 
 export default function(){
-    group('Fazendo login na aplicação ServerRest', () => {
-        loginService();
-    });
+  group('Fazendo login na aplicação ServerRest', () => {
+    loginService();
+  });
 
-    sleep(1);
+  sleep(1);
 }

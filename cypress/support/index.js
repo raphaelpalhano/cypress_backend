@@ -34,11 +34,11 @@ sqlServer.loadDBCommands();
 // require('./commands')
 
 Cypress.Server.defaults({
-    delay: 500,
-    force404: false,
-    whitelist: () => true,
+  delay: 500,
+  force404: false,
+  whitelist: () => true,
 });
-  
+
 Cypress.on('uncaught:exception', (err, runnable) => {
-    return false;
+  return false;
 });
