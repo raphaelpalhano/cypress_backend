@@ -16,13 +16,13 @@
 */
 
 Cypress.Commands.overwrite('request', (originalFunction, ...options) => {
-    if(options.length == 1){
-        if(Cypress.env('token')){
-            options[0].headers = {
-                Authorization: `${Cypress.env('token')}`
-            };
-        }
+  if(options.length == 1){
+    if(Cypress.env('token')){
+      options[0].headers = {
+        Authorization: `${Cypress.env('token')}`
+      };
     }
+  }
 
-    return originalFunction(...options);
+  return originalFunction(...options);
 });

@@ -1,3 +1,4 @@
+/// <reference types="../../" />
 /**
  * PT-BR:
  *  O service é como uma 'página' para nossa API.
@@ -19,7 +20,6 @@ const LOGIN_URL = '/login';
 
 Cypress.Commands.add('getAllUsers', () => {
   cy.requestWithoutBody('GET', USERS_URL);
-
 
 });
 
