@@ -14,8 +14,8 @@
  * escolher exatamente quais campos você quer trazer para seu schema.
  *
 */
-
 import Ajv from 'ajv';
+
 const ajv = new Ajv({allErrors: true, verbose: true, strict: false});
 
 Cypress.Commands.add('contractValidation', (res, service, request) => {

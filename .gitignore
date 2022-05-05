@@ -1,8 +1,10 @@
 # CYPRESS
 
-reports/html/
+# reports
+reports/html/*
+!reports/html/html.txt
 
-reports/junit/
+reports/junit/*.xml
 
 reports/cucumber-json/
 

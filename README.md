@@ -3,6 +3,8 @@
 
 # Estrutura do framework
 
+![flow_backend.drawio.png](./flows/flow_backend.drawio.png)
+
 
 ## 1. Feature
 
