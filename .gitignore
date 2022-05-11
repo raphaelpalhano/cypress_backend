@@ -1,5 +1,9 @@
 # CYPRESS
 
+#ENV
+cypress.env.json
+
+
 # reports
 reports/html/*
 !reports/html/html.txt
@@ -7,6 +11,7 @@ reports/html/*
 reports/junit/*.xml
 
 reports/cucumber-json/
+
 
 # NODE
 

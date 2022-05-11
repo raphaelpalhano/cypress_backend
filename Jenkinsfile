@@ -16,10 +16,10 @@ pipeline {
         }
     }
     post {
-         always {
+        always {
             script {
                 cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
             }
-         }
+        }
     }
 }

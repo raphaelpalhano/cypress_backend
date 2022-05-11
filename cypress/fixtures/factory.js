@@ -1,13 +1,15 @@
 import faker from 'faker-br';
 
+
+
 export class Factory {
 
   static getUserToLogin(login_type){
     switch (login_type) {
     case 'admin':
       return {
-        'email': 'fulano@qa.com',
-        'password': 'teste'
+        'email': Cypress.env('email'),
+        'password': Cypress.env('password'),
       };
     case 'empty':
       return {

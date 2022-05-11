@@ -5,7 +5,7 @@
 *  O report HTML é gerado a partir do report JSON gerado pelo cypress-cucumber-preprocessor - docs:
 https://github.com/TheBrainFamily/cypress-cucumber-preprocessor
 *  Os reports estão sendo gerados pelo multiple-cucumber-html-processor - docs:
- http://cypress.io/guides/references/plugins/multiple-cucumber-html-processor.html
+http://cypress.io/guides/references/plugins/multiple-cucumber-html-processor.html
 *  Para executar este script você pode utilizar o comando 'npm run cy:report' ou 'node ./cypress/support/reporter.js'
 *
 * EN:

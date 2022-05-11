@@ -21,7 +21,7 @@
         "max-len": [
           "error",
           {
-            "code": 120
+            "code": 130
           }
         ],
         "indent": [
@@ -31,8 +31,8 @@
         "quotes": [
           "error" ,
           "single",  {  "avoidEscape" : false ,  "allowTemplateLiterals" : true  }
-         ],
-         "semi": [2, "always"]
+        ],
+        "semi": [2, "always"]
 
       }
 

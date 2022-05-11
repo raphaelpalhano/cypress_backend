@@ -30,7 +30,7 @@ Cypress.Commands.add('postUserByType', (type) => {
 
 Cypress.Commands.add('loginWith', (login_type) => {
   let body = Factory.getUserToLogin(login_type);
-  cy.requestWithBody('POST', LOGIN_URL, body).then((response) => {
+  cy.requestWithBody('POST', LOGIN_URL, body, {log:false}).then((response) => {
     if( response.body.authorization){
 
       Cypress.env('token', response.body.authorization);
