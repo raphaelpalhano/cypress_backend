@@ -5,6 +5,7 @@
 */
 var rimraf = require('rimraf');
 
-rimraf.sync('reports/json/*');
+rimraf.sync('reports/cucumber-json/*.json');
 rimraf.sync('reports/html/*');
-rimraf.sync('reports/screenshots/spec/*');
+rimraf.sync('reports/screenshots/specs/*');
+rimraf.sync('reports/junit/*.xml');
