@@ -11,5 +11,10 @@
     "reporterOptions": {
     "mochaFile": "./reports/junit/test-results.[hash].xml",
     "testsuitesTitle": false
+    },
+    "env":{
+      "ServeRest": "https://serverest.dev",
+      "Services": "https://services.control/all"
     }
+
 }

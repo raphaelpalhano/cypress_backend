@@ -1,8 +1,5 @@
 # CYPRESS
 
-#ENV
-cypress.env.json
-
 
 # reports
 reports/html/*

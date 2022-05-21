@@ -1,5 +1,6 @@
-Feature: Users ServeRest
-   
+@ServeRest
+Feature: Requests in ServeRest
+
     Background: Been Logged In
       Given that register a user type "admin"
       When that is logged with "admin"

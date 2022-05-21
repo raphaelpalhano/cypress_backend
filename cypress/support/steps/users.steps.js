@@ -1,4 +1,3 @@
-
 import { When, Then, Given, And } from 'cypress-cucumber-preprocessor/steps';
 
 
@@ -87,4 +86,3 @@ Then('must be responsed the schema {string} with request {string}',
     });
   }
 );
-

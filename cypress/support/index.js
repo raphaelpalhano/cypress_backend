@@ -18,6 +18,8 @@
 // utils
 import './commands/utils/schema.validation';
 import './commands/utils/request.control';
+import './commands/utils/string.control';
+import './commands/utils/api.control';
 
 //service-commom
 import './commands/service/common/rest.service';

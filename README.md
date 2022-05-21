@@ -263,3 +263,27 @@ Cypress.Commands.add('deleteUser', (id) => {
 **Fonte**:[eslint-plugin](https://github.com/cypress-io/eslint-plugin-cypress)
 
 **Run** `npm run lint`
+
+
+
+# Variáveis de ambiente
+
+
+## Controlar as variáveis por arquivo
+
+1. Crie o arquivo `cypress.env.json` na base
+2. Coloque os valores da variável:
+ * ~~~json
+  {
+    "email": "email@fulano",
+    "password": "senha"
+  }
+  ~~~
+
+3. Acessar valor dentro do teste
+
+~~~javascript
+
+let email = Cypress.env('email');
+let senha = Cypress.env('password');
+~~~

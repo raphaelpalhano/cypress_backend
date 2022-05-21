@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "ajv": "^8.10.0",
-    "cypress": "8.4",
+    "cypress": "^9.6.1",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-sql-server": "^1.0.0",
     "faker-br": "^0.4.1",
