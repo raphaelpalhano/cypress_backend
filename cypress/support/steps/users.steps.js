@@ -86,3 +86,12 @@ Then('must be responsed the schema {string} with request {string}',
     });
   }
 );
+
+
+
+
+
+
+
+
+

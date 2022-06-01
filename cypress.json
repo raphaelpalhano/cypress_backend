@@ -1,5 +1,5 @@
 {
-    "video": false,
+    "video": true,
     "viewportWidth": 1520,
     "viewportHeight": 880,
     "chromeWebSecurity": false,
