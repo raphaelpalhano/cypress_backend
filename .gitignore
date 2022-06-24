@@ -8,6 +8,7 @@ reports/html/*
 reports/junit/*.xml
 
 reports/cucumber-json/
+cypress/videos/specs/*.mp4
 
 
 # NODE
